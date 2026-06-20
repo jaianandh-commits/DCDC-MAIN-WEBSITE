@@ -3,6 +3,22 @@ import { Milestone, LegacyStat, GalleryItem, DomainInfo } from '../types';
 export const MILESTONES: Milestone[] = [
   {
     id: 'm1',
+    year: '2016',
+    title: 'The Spark',
+    description: 'PLACEHOLDER: A handful of students from media and computing backgrounds began informally meeting to explore design and technology projects together — the earliest seed of what would become DCDC.',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80',
+    tag: 'EARLY SPARK'
+  },
+  {
+    id: 'm2',
+    year: '2017',
+    title: 'Finding Our Footing',
+    description: 'PLACEHOLDER: The informal group started organizing small peer-learning sessions and campus meetups, gradually building the foundations of a shared identity and purpose.',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
+    tag: 'FOUNDATIONS'
+  },
+  {
+    id: 'm3',
     year: '2018',
     title: 'The Genesis',
     description: 'Founded as a technical interest group within SRMIST to bridge the gap between media, design thinking, and technical engineering.',
@@ -10,7 +26,7 @@ export const MILESTONES: Milestone[] = [
     tag: 'FOUNDATION'
   },
   {
-    id: 'm2',
+    id: 'm4',
     year: '2019',
     title: 'Flagship Seminar Launch',
     description: 'Launched our first hands-on UI/UX & Web architecture workshop, inviting 150+ students into collaborative development paradigms.',
@@ -18,7 +34,15 @@ export const MILESTONES: Milestone[] = [
     tag: 'FIRST WORKSHOP'
   },
   {
-    id: 'm3',
+    id: 'm5',
+    year: '2020',
+    title: 'Going Digital',
+    description: 'PLACEHOLDER: Adapted to remote collaboration, moving workshops and mentorship online and reaching a wider base of students beyond the physical campus.',
+    image: 'https://images.unsplash.com/photo-1591453089816-0fbb971b454c?auto=format&fit=crop&w=800&q=80',
+    tag: 'REMOTE PIVOT'
+  },
+  {
+    id: 'm6',
     year: '2021',
     title: 'Interactive Labs & Mentorship',
     description: 'Transformed into specialized creative labs. Initiated physical and digital peer-learning pathways and active team incubations.',
@@ -26,7 +50,15 @@ export const MILESTONES: Milestone[] = [
     tag: 'COMMUNITY GROWTH'
   },
   {
-    id: 'm4',
+    id: 'm7',
+    year: '2022',
+    title: 'Cross-Disciplinary Expansion',
+    description: 'PLACEHOLDER: Broadened our scope beyond design and code, welcoming storytelling, media production, and event-craft into the club\'s core disciplines.',
+    image: 'https://images.unsplash.com/photo-1517245386807-9accdfe17448?auto=format&fit=crop&w=800&q=80',
+    tag: 'CROSS-DISCIPLINARY'
+  },
+  {
+    id: 'm8',
     year: '2023',
     title: 'High-Tech Prototypes Shipped',
     description: 'Engineered hardware-software integrations including custom IoT devices, autonomous sensor rigs, and interactive web tools.',
@@ -34,7 +66,15 @@ export const MILESTONES: Milestone[] = [
     tag: 'MAJOR PROJECTS'
   },
   {
-    id: 'm5',
+    id: 'm9',
+    year: '2024',
+    title: 'Scaling Our Impact',
+    description: 'PLACEHOLDER: Grew our membership and event reach significantly, partnering with other campus communities and running our largest workshop series to date.',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
+    tag: 'SCALE & REACH'
+  },
+  {
+    id: 'm10',
     year: '2025',
     title: 'SRMIST Flagship Prestige',
     description: 'DCDC elevated to SRMIST’s gold standard student group for multidisciplinary technical products and high-fidelity storytelling.',
@@ -42,7 +82,7 @@ export const MILESTONES: Milestone[] = [
     tag: 'INNOVATION EXPANSION'
   },
   {
-    id: 'm6',
+    id: 'm11',
     year: '2026 & Beyond',
     title: 'Incubator & Speculative Lab',
     description: 'Focusing on artificial intelligence, spatial user interfaces, and custom physical interaction systems to shape tomorrow.',
