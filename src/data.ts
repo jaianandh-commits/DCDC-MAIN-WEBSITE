@@ -1,0 +1,202 @@
+import { Milestone, LegacyStat, GalleryItem, DomainInfo } from './types';
+
+export const MILESTONES: Milestone[] = [
+  {
+    id: 'm1',
+    year: '2018',
+    title: 'The Genesis',
+    description: 'Founded as a technical interest group within SRMIST to bridge the gap between media, design thinking, and technical engineering.',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
+    tag: 'FOUNDATION'
+  },
+  {
+    id: 'm2',
+    year: '2019',
+    title: 'Flagship Seminar Launch',
+    description: 'Launched our first hands-on UI/UX & Web architecture workshop, inviting 150+ students into collaborative development paradigms.',
+    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80',
+    tag: 'FIRST WORKSHOP'
+  },
+  {
+    id: 'm3',
+    year: '2021',
+    title: 'Interactive Labs & Mentorship',
+    description: 'Transformed into specialized creative labs. Initiated physical and digital peer-learning pathways and active team incubations.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+    tag: 'COMMUNITY GROWTH'
+  },
+  {
+    id: 'm4',
+    year: '2023',
+    title: 'High-Tech Prototypes Shipped',
+    description: 'Engineered hardware-software integrations including custom IoT devices, autonomous sensor rigs, and interactive web tools.',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    tag: 'MAJOR PROJECTS'
+  },
+  {
+    id: 'm5',
+    year: '2025',
+    title: 'SRMIST Flagship Prestige',
+    description: 'DCDC elevated to SRMIST’s gold standard student group for multidisciplinary technical products and high-fidelity storytelling.',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80',
+    tag: 'INNOVATION EXPANSION'
+  },
+  {
+    id: 'm6',
+    year: '2026 & Beyond',
+    title: 'Incubator & Speculative Lab',
+    description: 'Focusing on artificial intelligence, spatial user interfaces, and custom physical interaction systems to shape tomorrow.',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+    tag: 'FUTURE VISION'
+  }
+];
+
+export const LEGACY_STATS: LegacyStat[] = [
+  {
+    id: 's1',
+    value: '25+',
+    label: 'Members',
+    description: 'A close-knit family of brilliant designers, makers, and innovators.',
+    category: 'COMMUNITY'
+  },
+  {
+    id: 's3',
+    value: '5+',
+    label: 'Workshops',
+    description: 'High-end skill sharing in Figma design systems, motion CSS, and system code.',
+    category: 'EDUCATION'
+  },
+  {
+    id: 's4',
+    value: '15+',
+    label: 'Events',
+    description: 'High-tempo design showcases, student forums, hack days, and exhibitions.',
+    category: 'LEGACY'
+  },
+  {
+    id: 's5',
+    value: '13',
+    label: 'Domains',
+    description: 'Perfectly aligned nodes blending art, communication, and technological craft.',
+    category: 'STRUCTURE'
+  }
+];
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'g1',
+    title: 'Design Critique Workshop',
+    category: 'workshops',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=850&q=80',
+    description: 'DCDC designers gathering to dissect responsive UI paradigms and typography systems.',
+    date: 'October 2024'
+  },
+  {
+    id: 'g2',
+    title: 'Collaborative Code Lab',
+    category: 'collaborations',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=850&q=80',
+    description: 'Multi-disciplinary squads building creative frontend modules in a high-focus environment.',
+    date: 'January 2025'
+  },
+  {
+    id: 'g3',
+    title: 'Flagship Showcase Celebration',
+    category: 'events',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=850&q=80',
+    description: 'Commending the tireless project squads on the campus auditorium stage during the main symposium.',
+    date: 'March 2025'
+  },
+  {
+    id: 'g4',
+    title: 'Testing IoT Prototypes',
+    category: 'innovations',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=850&q=80',
+    description: 'Our physical makerspace lab validating gesture-enabled microcontrollers and wireless modules.',
+    date: 'April 2025'
+  },
+  {
+    id: 'g5',
+    title: 'Aesthetic Interfaces Seminar',
+    category: 'workshops',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=850&q=80',
+    description: 'Demystifying how high-end agencies pair typography, motion, and contrast for visual prestige.',
+    date: 'August 2025'
+  },
+  {
+    id: 'g6',
+    title: 'DCDC Interactive Sandbox',
+    category: 'innovations',
+    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=850&q=80',
+    description: 'Freshmen exploring creative computing tools and live visual installations under mentor guidance.',
+    date: 'September 2025'
+  }
+];
+
+export const DOMAINS: DomainInfo[] = [
+  {
+    id: 'tech',
+    title: 'Technology',
+    description: 'The solid engineering backbone. We build robust React structures, custom hardware interfaces, and clean, high-performance systems.',
+    skills: ['React & UI Engineering', 'Hardware IoT System design', 'API Integration & DevOps'],
+    activities: ['Development Hack-Sprints', 'Hardware Lab Debugging', 'Code Architecture Auditing'],
+    exampleProjects: [
+      { name: 'SRMIST Event Coordinator', desc: 'Secure local campus event tracking application running on Edge structures.' },
+      { name: 'Smart Pointer IoT module', desc: 'Real-time gestural micro-controller to automate slide interactions.' }
+    ],
+    color: 'text-[#2458FF]',
+    glowColor: 'group-hover:shadow-[0_0_40px_-10px_rgba(36,88,255,0.4)] border-[#2458FF]/20 group-hover:border-[#2458FF]/50'
+  },
+  {
+    id: 'design',
+    title: 'Design',
+    description: 'The aesthetic identity. We craft micro-interactions, responsive systems, corporate typography templates, and pure layout elegance.',
+    skills: ['Figma Design Systems', 'Cinematic Rendering', 'Human-Centered Wireframes'],
+    activities: ['Creative Critiques & Redesigns', 'Interface Prototyping Jams', 'Grid & Typography Drills'],
+    exampleProjects: [
+      { name: 'DCDC Visual Exhibition System', desc: 'A custom, modular premium layout language engineered for screen displays.' },
+      { name: 'Carbon Design Tokens', desc: 'Dark-focused, high-contrast, eye-safe components for technical web clients.' }
+    ],
+    color: 'text-[#E5B93C]',
+    glowColor: 'group-hover:shadow-[0_0_40px_-10px_rgba(229,185,60,0.4)] border-[#E5B93C]/20 group-hover:border-[#E5B93C]/50'
+  },
+  {
+    id: 'communication',
+    title: 'Communication',
+    description: 'The narrative bridge. We connect thinkers, capture industry relations, build deep content documentation, and craft stories.',
+    skills: ['Technical Storytelling', 'Strategic Copywriting', 'Institutional Relations'],
+    activities: ['Editorial & Article Curation', 'Sponsorship Presentations', 'Live Event Moderation'],
+    exampleProjects: [
+      { name: 'The Innovator\'s Chronicles', desc: 'A quarterly physical newsletter exploring the convergence of computer science and sculpture.' },
+      { name: 'DCDC Legacy Documentations', desc: 'Structured oral histories of the club transcribed into rich virtual interactive stories.' }
+    ],
+    color: 'text-[#FF5A7A]',
+    glowColor: 'group-hover:shadow-[0_0_40px_-10px_rgba(255,90,122,0.4)] border-[#FF5A7A]/20 group-hover:border-[#FF5A7A]/50'
+  },
+  {
+    id: 'media',
+    title: 'Media',
+    description: 'The visual archivists. We immortalize real-world events, photograph makerspaces, produce high-end motion teasers, and direct cinematic narratives.',
+    skills: ['Cinematography & FX', 'Aesthetic Photography', 'Curated Synthesizer Soundscapes'],
+    activities: ['Campus Documentaries', 'Promotional Teaser Editing', 'Atmospheric Event Shoots'],
+    exampleProjects: [
+      { name: 'DCDC Symphony Film', desc: 'An immersive video showcase tracking the design journey of major club creations.' },
+      { name: 'Creative Frames Archive', desc: 'A stunning curated photo log celebrating student engineers in motion.' }
+    ],
+    color: 'text-emerald-400',
+    glowColor: 'group-hover:shadow-[0_0_40px_-10px_rgba(52,211,153,0.4)] border-emerald-400/20 group-hover:border-emerald-400/50'
+  },
+  {
+    id: 'innovation',
+    title: 'Innovation',
+    description: 'The speculative sandbox. We build interactive art scripts, write models, experiment with hardware control interfaces, and design modern spatial computing setups.',
+    skills: ['Speculative Interactive Arts', 'AI Interface Exploration', 'New Hardware Rigs'],
+    activities: ['Generative Web Code-Offs', 'Immersive Interface Brainstorms', 'Multi-player Screen Experiments'],
+    exampleProjects: [
+      { name: 'Acoustic Biosensor Synth', desc: 'Translating plant electro-signals into real-time ambient modular soundscapes.' },
+      { name: 'Gestured Optical Presenter', desc: 'Browser script mapping user palm positions directly to slide translation states.' }
+    ],
+    color: 'text-purple-400',
+    glowColor: 'group-hover:shadow-[0_0_40px_-10px_rgba(192,132,252,0.4)] border-purple-400/20 group-hover:border-purple-400/50'
+  }
+];

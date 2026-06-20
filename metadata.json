@@ -1,0 +1,6 @@
+{
+  "name": "DCDC Digital Museum",
+  "description": "A premium, museum-inspired digital exhibition showcasing the legacy, creativity, and innovation of the Digital Communication & Design Club, SRMIST.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
