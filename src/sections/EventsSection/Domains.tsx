@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DOMAINS } from '../data';
+import { DOMAINS } from '../../data';
 import { Terminal, Lightbulb, Library, Compass, Layers, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 

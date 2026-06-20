@@ -95,10 +95,10 @@ export default function Footer({ onJoinClick, onExploreProjectsClick }: FooterPr
               <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="text-left hover:text-white transition-colors cursor-pointer">
                 The Core
               </button>
-              <button onClick={() => document.getElementById('legacy')?.scrollIntoView({ behavior: 'smooth' })} className="text-left hover:text-white transition-colors cursor-pointer">
+              <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="text-left hover:text-white transition-colors cursor-pointer">
                 Exhibition Records
               </button>
-              <button onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })} className="text-left hover:text-white transition-colors cursor-pointer">
+              <button onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })} className="text-left hover:text-white transition-colors cursor-pointer">
                 Chronology
               </button>
               <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="text-left hover:text-white transition-colors cursor-pointer">

@@ -1,4 +1,4 @@
-import { LEGACY_STATS } from '../data';
+import { LEGACY_STATS } from '../../data';
 import { Landmark, Compass, Award, Heart, Shield } from 'lucide-react';
 import { motion } from 'motion/react';
 

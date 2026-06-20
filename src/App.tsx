@@ -1,53 +1,56 @@
 import { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import Timeline from './components/Timeline';
-import MembershipModal from './components/MembershipModal';
-import VaultModal from './components/VaultModal';
-import ContactModal from './components/ContactModal';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
+
+// Sections
+import HomeSection from './sections/HomeSection';
+import AboutSection from './sections/AboutSection';
+import EventsSection from './sections/EventsSection';
+import TeamSection from './sections/TeamSection';
+import GallerySection from './sections/GallerySection';
+import ContactSection from './sections/ContactSection';
+
+// Modals
+import VaultModal from './modals/VaultModal';
+import MembershipModal from './modals/MembershipModal';
+import ContactModal from './modals/ContactModal';
 
 export default function App() {
   const [isVaultOpen, setIsVaultOpen] = useState(false);
   const [isMembershipOpen, setIsMembershipOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
-
   return (
-    <div className="min-h-screen bg-[#06080D] text-white selection:bg-[#E5B93C]/30 selection:text-white">
-      {/* 1. Global Navigation Bar */}
+    <div className="min-h-screen bg-background text-text selection:bg-primary/30 selection:text-white">
       <Navbar 
         onVaultClick={() => setIsVaultOpen(true)}
         onContactClick={() => setIsContactOpen(true)}
       />
 
-      {/* 2. Page Sections */}
       <main className="relative flex flex-col w-full">
-        {/* Section 1: Hero */}
-        <Hero onJoinClick={() => setIsMembershipOpen(true)} />
-
-        {/* Section 2: Legacy in Numbers */}
-        <Stats />
-
-        {/* Section 3: Timeline */}
-        <Timeline />
-
+        <HomeSection onJoinClick={() => setIsMembershipOpen(true)} />
+        <AboutSection />
+        <EventsSection />
+        <TeamSection />
+        <GallerySection />
+        <ContactSection />
       </main>
 
-      {/* 3. Modal Overlays */}
-      {/* Project Vault Secures */}
+      <Footer 
+        onJoinClick={() => setIsMembershipOpen(true)}
+        onExploreProjectsClick={() => setIsVaultOpen(true)}
+      />
+
       <VaultModal 
         isOpen={isVaultOpen} 
         onClose={() => setIsVaultOpen(false)} 
       />
 
-      {/* Membership Candidacy registry */}
       <MembershipModal 
         isOpen={isMembershipOpen} 
         onClose={() => setIsMembershipOpen(false)} 
       />
 
-      {/* Cursor Contact Deck */}
       <ContactModal 
         isOpen={isContactOpen} 
         onClose={() => setIsContactOpen(false)} 

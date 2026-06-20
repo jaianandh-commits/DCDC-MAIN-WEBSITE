@@ -143,7 +143,6 @@ export default function Hero({ onJoinClick }: HeroProps) {
 
   return (
     <section 
-      id="home" 
       className="relative min-h-screen w-full bg-[#030509] pt-28 pb-32 md:pb-40 flex items-center justify-center overflow-hidden"
     >
       {/* 1. High-Contrast Blueprint Space Grid Background */}

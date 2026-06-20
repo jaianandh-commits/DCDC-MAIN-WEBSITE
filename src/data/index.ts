@@ -1,4 +1,4 @@
-import { Milestone, LegacyStat, GalleryItem, DomainInfo } from './types';
+import { Milestone, LegacyStat, GalleryItem, DomainInfo } from '../types';
 
 export const MILESTONES: Milestone[] = [
   {

@@ -14,6 +14,8 @@ export default function Navbar({ onVaultClick, onContactClick }: NavbarProps) {
 
   const [logoError, setLogoError] = useState(false);
 
+  const sectionIds = ['home', 'about', 'events', 'team', 'gallery', 'contact'];
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -21,6 +23,38 @@ export default function Navbar({ onVaultClick, onContactClick }: NavbarProps) {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Scroll-spy: highlight whichever section is currently in view
+  useEffect(() => {
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry that's most visible right now
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      {
+        // Counts a section as "active" once it crosses the middle band of the viewport,
+        // accounting for the fixed navbar height up top
+        rootMargin: '-100px 0px -55% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -33,8 +67,9 @@ export default function Navbar({ onVaultClick, onContactClick }: NavbarProps) {
 
   const menuItems = [
     { label: 'Home', sectionId: 'home' },
-    { label: 'About', sectionId: 'legacy' },
-    { label: 'Events', sectionId: 'journey' },
+    { label: 'About', sectionId: 'about' },
+    { label: 'Events', sectionId: 'events' },
+    { label: 'Team', sectionId: 'team' },
     { label: 'Gallery', sectionId: 'gallery' },
     { label: 'Contact', sectionId: 'contact' }
   ];
@@ -100,9 +135,7 @@ export default function Navbar({ onVaultClick, onContactClick }: NavbarProps) {
                   id={`nav-link-${item.sectionId}`}
                   onClick={() => {
                     setActiveSection(item.sectionId);
-                    if (item.sectionId === 'home') {
-                      scrollToSection('home');
-                    }
+                    scrollToSection(item.sectionId);
                   }}
                   className={`px-6 py-2.5 text-sm font-medium tracking-wide rounded-full transition-all duration-300 cursor-pointer ${
                     activeSection === item.sectionId
@@ -150,11 +183,7 @@ export default function Navbar({ onVaultClick, onContactClick }: NavbarProps) {
                     key={item.label}
                     onClick={() => {
                       setActiveSection(item.sectionId);
-                      if (item.sectionId === 'home') {
-                        scrollToSection('home');
-                      } else {
-                        setMobileMenuOpen(false);
-                      }
+                      scrollToSection(item.sectionId);
                     }}
                     className={`text-left text-lg font-sans font-medium tracking-wide transition-colors ${
                       activeSection === item.sectionId ? 'text-white' : 'text-[#D8DEE8]/60 hover:text-white'

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MILESTONES } from '../data';
+import { MILESTONES } from '../../data';
 import { Calendar, ArrowRight, ArrowLeft, Lightbulb, UserCheck, Milestone as MilestoneIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 

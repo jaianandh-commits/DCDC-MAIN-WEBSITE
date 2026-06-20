@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GALLERY_ITEMS } from '../data';
+import { GALLERY_ITEMS } from '../../data';
 import { Filter, Calendar, ZoomIn, X, Clock, Eye, Landmark } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
