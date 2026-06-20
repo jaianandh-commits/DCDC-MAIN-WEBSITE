@@ -111,13 +111,13 @@ export default function IsometricJourneyView({
   };
 
   return (
-    <div className="w-full max-w-full flex flex-col items-center select-none bg-[#030816] py-10 px-4 md:px-8 overflow-hidden relative" id="roadmap-root">
+    <div className="w-full max-w-full flex flex-col items-center select-none bg-[#06080D] py-10 px-4 md:px-8 overflow-hidden relative" id="roadmap-root">
       
       {/* MAP CONTROLS & CAPTIONS */}
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-4 mb-6 z-10" id="roadmap-header">
         <div className="flex flex-col text-center md:text-left">
           <div className="flex items-center gap-2.5 justify-center md:justify-start">
-            <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#E5B93C] animate-pulse" />
             <h2 className="text-white text-2xl font-black md:text-3xl font-sans tracking-tight uppercase">
               DCDC UPCOMING EVENTS
             </h2>
@@ -226,7 +226,7 @@ export default function IsometricJourneyView({
       </div>
 
       {/* OVERFLOW VIEWPORT CAPABLE OF PANNING SWIPES (Desktop Only) */}
-      <div className="hidden lg:block w-full max-w-7xl overflow-x-auto scrollbar-none pb-6 rounded-2xl border border-white/[0.03] bg-[#020712]/90 shadow-2xl relative" id="roadmap-viewport">
+      <div className="hidden lg:block w-full max-w-7xl overflow-x-auto scrollbar-none pb-6 rounded-2xl border border-white/[0.03] bg-[#0D1118]/90 shadow-2xl relative" id="roadmap-viewport">
         {/* DRAG SCROLLER INNER FIELD FORCING EXACT COORD RESOLUTION STABILITY */}
         <div 
           className="relative w-[1240px] mx-auto select-none flex-shrink-0 transition-all duration-500"
