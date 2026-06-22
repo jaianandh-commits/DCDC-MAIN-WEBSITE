@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { teamData } from '../../data/teamData';
 import TeamHeroCollage from '../../components/team/TeamHeroCollage';
 import TeamGrid from '../../components/team/TeamGrid';
-import TeamDetailModal from '../../components/team/TeamDetailModal';
+
 
 export default function TeamSection() {
   const [selectedMemberId, setSelectedMemberId] = useState<string | null>(null);
@@ -32,11 +32,6 @@ export default function TeamSection() {
         onSelectMember={handleSelectMember} 
       />
 
-      {/* Profile details popover modal */}
-      <TeamDetailModal 
-        member={selectedMember} 
-        onClose={() => setSelectedMemberId(null)} 
-      />
     </section>
   );
 }
